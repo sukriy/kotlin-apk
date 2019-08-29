@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "8827050897",
+    "firebase_url": "https://prokop-ff2bd.firebaseio.com",
+    "project_id": "prokop-ff2bd",
+    "storage_bucket": "prokop-ff2bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8827050897:android:db90fabc90ab2d24",
+        "android_client_info": {
+          "package_name": "com.example.koperasi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8827050897-0nbumb3s9gsjjap5ej4sgbp9bl5dl4na.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.koperasi",
+            "certificate_hash": "221b160bfc7ab291c3379c120bf8dbfe6080de64"
+          }
+        },
+        {
+          "client_id": "8827050897-bt26bp6vct8klr8v04jmq1btml52849e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC1fMUbrgdOomN6ElAynPHQuUYCw4To5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8827050897-bt26bp6vct8klr8v04jmq1btml52849e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

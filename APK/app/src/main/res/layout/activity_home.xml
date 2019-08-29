@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.HomeActivity">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ProgressBar
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pBar" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                    app:layout_constraintTop_toTopOf="@+id/ll" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ll" android:layout_marginTop="8dp"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ll"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:background="#fcfcfc"
+                    android:gravity="center">
+
+                <fragment
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:name="com.example.koperasi.fragment.CommonFragment"
+                        android:id="@+id/frag"/>
+                <LinearLayout
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <android.support.v7.widget.CardView
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="false"
+                            android:layout_width="340dp"
+                            android:layout_height="200dp"
+                            android:layout_margin="10dp">
+                        <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                            <ImageView
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="120dp"
+                                    android:layout_height="120dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/circle"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/no_pic" android:id="@+id/gambar"/>
+
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/lightgray"
+                                    android:layout_margin="5dp"/>
+                            <android.support.constraint.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/darker_gray" android:id="@+id/txt_namaLengkap"
+                                        android:text="namaLengkap"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                                        android:layout_marginStart="8dp"/>
+                                <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/darker_gray" android:id="@+id/txt_saldo"
+                                        android:text="saldo"
+                                        app:layout_constraintStart_toStartOf="@+id/txt_namaLengkap"
+                                        app:layout_constraintTop_toBottomOf="@+id/txt_namaLengkap"/>
+                                <ImageView
+                                        android:src="@drawable/ic_exit_to_app_black_24dp"
+                                        android:text="Button"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" android:id="@+id/btn_logout"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                                        app:layout_constraintStart_toEndOf="@+id/txt_namaLengkap"
+                                        app:layout_constraintHorizontal_bias="1.0" android:layout_marginBottom="8dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"/>
+                                <TextView
+                                        android:text="Change Password"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/txt_changePassword" app:layout_constraintEnd_toEndOf="parent"
+                                        android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                                        android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toTopOf="@+id/btn_logout"
+                                        android:textColor="#2196F3"/>
+                            </android.support.constraint.ConstraintLayout>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+                <TextView
+                        android:text="Untuk tabungan dan pembayaran cicilan dapat disetorkan ke rekening Bank NISP atas nama Koperasi Karyawan Bahtera Abadi nomor 1234567890"
+                        android:layout_width="340dp"
+                        android:layout_height="wrap_content" android:id="@+id/textView50" android:gravity="center"/>
+                <LinearLayout
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <android.support.v7.widget.CardView
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:id="@+id/cardPinjaman"
+                            android:layout_width="160dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp">
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                            <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:background="@drawable/cerclebackgroundpurple"
+                                    android:src="@drawable/ic_attach_money_black_24dp"
+                                    android:padding="10dp"/>
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/lightgray"
+                                    android:layout_margin="10dp"/>
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Pinjaman"
+                                    android:padding="5dp"
+                                    android:textColor="@android:color/darker_gray"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:layout_width="160dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp" android:id="@+id/cardSukarela">
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                            <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:background="@drawable/cerclebackgroundpink"
+                                    android:src="@drawable/ic_lightbulb_outline_black_24dp"
+                                    android:padding="10dp"/>
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/lightgray"
+                                    android:layout_margin="10dp"/>
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Tabungan Sukarela"
+                                    android:padding="5dp"
+                                    android:textColor="@android:color/darker_gray"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+                <LinearLayout
+                        android:clipToPadding="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <android.support.v7.widget.CardView
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:layout_width="160dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp" android:id="@+id/cardHistory">
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                            <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:background="@drawable/cerclebackgroundgreen"
+                                    android:src="@drawable/ic_control_point_black_24dp"
+                                    android:padding="10dp"/>
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/lightgray"
+                                    android:layout_margin="10dp"/>
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="History"
+                                    android:padding="5dp"
+                                    android:textColor="@android:color/darker_gray"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:clickable="true"
+                            android:layout_width="160dp"
+                            android:layout_height="190dp"
+                            android:layout_margin="10dp" android:id="@+id/cardProfile">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                            <ImageView
+                                    android:layout_width="64dp"
+                                    android:layout_height="64dp"
+                                    android:background="@drawable/cerclebackgroundyello"
+                                    android:padding="10dp"
+                                    android:src="@drawable/ic_attach_file_black_24dp"/>
+
+                            <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_margin="10dp"
+                                    android:background="@color/lightgray"/>
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Profile"
+                                    android:textColor="@android:color/darker_gray"/>
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
