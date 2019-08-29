@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Koperasi</string>
-    <string name="username">Username</string>
-    <string name="login">Login</string>
-    <string name="title_activity_register">RegisterActivity</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-</resources>
